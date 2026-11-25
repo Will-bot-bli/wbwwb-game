@@ -1,0 +1,42 @@
+# We Become What We Behold — Google Sites embed package
+
+This is the complete HTML5 game source package from the supplied `wbwwb-master.zip`,
+with a responsive stage stylesheet so it scales to a Google Sites embed.
+
+## Host it first
+Google Sites' Embed-code box does not host a folder of assets. Publish this folder
+as a static website (for example with GitHub Pages), then embed the published URL.
+
+### GitHub Pages
+1. Create a new public repository on GitHub.
+2. Upload the **contents** of this folder (so `index.html`, `css/`, `js/`, and `sprites/`
+   are at the repository root).
+3. In the repository, open Settings → Pages.
+4. Under Build and deployment, choose Deploy from a branch, select `main` and `/ (root)`,
+   then Save.
+5. Wait for GitHub Pages to publish. Your game URL will look like
+   `https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/`.
+
+### Embed in Google Sites
+In Google Sites choose Insert → Embed → Embed code and paste this, replacing the URL
+with your published GitHub Pages URL:
+
+```html
+<div style="width:100%;aspect-ratio:16/9;background:#000;overflow:hidden">
+  <iframe
+    src="https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/"
+    title="We Become What We Behold"
+    style="width:100%;height:100%;border:0"
+    allow="autoplay; fullscreen"
+    allowfullscreen>
+  </iframe>
+</div>
+```
+
+The game runs from the hosted game files but stays visible inside the Google Sites page.
+If a school/work network filter blocks GitHub Pages, this hosting method will not bypass it.
+
+## Credits and licensing
+The original README states that the creator released their code and art under CC0,
+and separately credits PIXI.js and Howler.js (MIT), plus individual sound assets
+with their own listed licenses/attributions. See `README.md` for the original credits.
